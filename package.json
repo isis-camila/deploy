@@ -1,42 +1,59 @@
 {
-  "name": "deploy",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "deploy",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "webpack-dev": "webpack-dev-server --open --hot --config=webpack.config.js --env.development=true",
+        "webpack-prod": "webpack --config=webpack.config.js --env.production=true"
+
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "dependencies": {
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11"
     },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "babel-core": "6.26.0",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "7.1.2",
+        "babel-preset-env": "1.6.0",
+        "babel-preset-stage-3": "6.24.1",
+        "cross-env": "5.0.5",
+        "css-loader": "0.28.7",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "file-loader": "1.1.6",
+        "html-webpack-plugin": "3.2.0",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "vue-loader": "15.7.1",
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "4.39.3",
+        "webpack-cli": "3.3.7",
+        "webpack-dev-server": "3.8.0",
+        "webpack-merge": "4.2.1"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
 }
